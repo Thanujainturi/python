@@ -1,0 +1,36 @@
+country="INDIA"
+class ace:
+    col="ace cllg"
+    def set_dim(self,a,b,c,d):
+        self.tot=a+b+c
+        self.name=d
+    def display(self):
+        print("1.NAME:",self.name)
+        print("2.MARKS:",self.tot)
+        print("3.college:",self.col)
+        print("4.country",country)
+        
+class bvirt:
+    col="bvirt"
+    def set_dim(self,a,b,c,d):
+        self.tot=a+b+c
+        self.name=d
+    def show(self):
+        print("1.NAME:",self.name)
+        print("2.MARKS:",self.tot)
+        print("3.college:",self.col)
+        print("4.country",country)
+
+
+a=ace()
+a1=ace()
+b=bvirt()
+b1=bvirt()
+a.set_dim(10,20,30,"bottle")
+a1.set_dim(22,33,11,"mouse")
+b.set_dim(5,1,30,"cap")
+b1.set_dim(12,2,10,"lappy")
+a.display()
+a1.display()
+b.show()
+b1.show()
