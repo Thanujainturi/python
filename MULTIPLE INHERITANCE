@@ -1,0 +1,17 @@
+class Animal():
+    def legs(self):
+        print("if animal is mammal")
+
+class Dog():
+    def bark(self):
+        print("Dog is barking")
+        
+class puppy(Animal,Dog):
+    def weep(self):
+        print("puppy is weeping")
+
+
+p=puppy()
+p.legs()
+p.bark()
+p.weep()
