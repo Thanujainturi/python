@@ -1,0 +1,4 @@
+import numpy as np
+a=[1,5,50,66,44,33]
+res=np.percentile(a,90)
+print(res)
