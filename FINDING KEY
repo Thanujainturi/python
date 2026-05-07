@@ -1,0 +1,9 @@
+a=int(input("Enter a number: "))
+b=int(input("Enter a number: "))
+c=int(input("Enter a number: "))
+l1=[int(i) for i in str(a)]
+l2=[int(i) for i in str(b)]
+l3=[int(i) for i in str(c)]
+m=max(l1)+max(l2)+max(l3)
+m=min(l1)+min(l2)+min(l3)
+print(m+m)
