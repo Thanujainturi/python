@@ -1,0 +1,140 @@
+from tkinter import *
+
+a=Tk()
+a.geometry("360x500")
+a.title("CALCULATOR")
+a.config(bg="#1e1e1e")
+a.resizable(False,False)
+
+# DISPLAY BOX
+x=Entry(
+    a,
+    width=10,
+    font=('Arial',35,'bold'),
+    bg="white",
+    fg="black",
+    bd=5,
+    relief="solid",
+    justify="right"
+)
+
+x.grid(column=0,row=0,columnspan=4,padx=10,pady=15,ipady=15)
+
+
+def click(num):
+    curr=x.get()
+    x.delete(0,END)
+    x.insert(0,str(curr)+str(num))
+
+
+def clear():
+    x.delete(0,END)
+
+
+def equal():
+    res=eval(x.get())
+    x.delete(0,END)
+    x.insert(0,res)
+
+
+# BUTTON STYLE
+btn_style={
+    "width":5,
+    "height":2,
+    "font":('Arial',18,'bold'),
+    "bd":0,
+    "relief":"raised",
+    "activeforeground":"white",
+    "cursor":"hand2"
+}
+
+
+# ROW 1
+Button(a,text="1",bg="#2d2d2d",fg="white",
+activebackground="#444444",
+command=lambda:click(1),
+**btn_style).grid(row=1,column=0,padx=5,pady=5)
+
+Button(a,text="2",bg="#2d2d2d",fg="white",
+activebackground="#444444",
+command=lambda:click(2),
+**btn_style).grid(row=1,column=1,padx=5,pady=5)
+
+Button(a,text="3",bg="#2d2d2d",fg="white",
+activebackground="#444444",
+command=lambda:click(3),
+**btn_style).grid(row=1,column=2,padx=5,pady=5)
+
+Button(a,text="+",bg="#ff9500",fg="white",
+activebackground="#ffaa33",
+command=lambda:click('+'),
+**btn_style).grid(row=1,column=3,padx=5,pady=5)
+
+
+# ROW 2
+Button(a,text="4",bg="#2d2d2d",fg="white",
+activebackground="#444444",
+command=lambda:click(4),
+**btn_style).grid(row=2,column=0,padx=5,pady=5)
+
+Button(a,text="5",bg="#2d2d2d",fg="white",
+activebackground="#444444",
+command=lambda:click(5),
+**btn_style).grid(row=2,column=1,padx=5,pady=5)
+
+Button(a,text="6",bg="#2d2d2d",fg="white",
+activebackground="#444444",
+command=lambda:click(6),
+**btn_style).grid(row=2,column=2,padx=5,pady=5)
+
+Button(a,text="-",bg="#ff9500",fg="white",
+activebackground="#ffaa33",
+command=lambda:click('-'),
+**btn_style).grid(row=2,column=3,padx=5,pady=5)
+
+
+# ROW 3
+Button(a,text="7",bg="#2d2d2d",fg="white",
+activebackground="#444444",
+command=lambda:click(7),
+**btn_style).grid(row=3,column=0,padx=5,pady=5)
+
+Button(a,text="8",bg="#2d2d2d",fg="white",
+activebackground="#444444",
+command=lambda:click(8),
+**btn_style).grid(row=3,column=1,padx=5,pady=5)
+
+Button(a,text="9",bg="#2d2d2d",fg="white",
+activebackground="#444444",
+command=lambda:click(9),
+**btn_style).grid(row=3,column=2,padx=5,pady=5)
+
+Button(a,text="*",bg="#ff9500",fg="white",
+activebackground="#ffaa33",
+command=lambda:click('*'),
+**btn_style).grid(row=3,column=3,padx=5,pady=5)
+
+
+# ROW 4
+Button(a,text="C",bg="#ff3b30",fg="white",
+activebackground="#ff5c52",
+command=clear,
+**btn_style).grid(row=4,column=0,padx=5,pady=5)
+
+Button(a,text="0",bg="#2d2d2d",fg="white",
+activebackground="#444444",
+command=lambda:click(0),
+**btn_style).grid(row=4,column=1,padx=5,pady=5)
+
+Button(a,text="=",bg="#34c759",fg="white",
+activebackground="#4cd964",
+command=equal,
+**btn_style).grid(row=4,column=2,padx=5,pady=5)
+
+Button(a,text="/",bg="#ff9500",fg="white",
+activebackground="#ffaa33",
+command=lambda:click('/'),
+**btn_style).grid(row=4,column=3,padx=5,pady=5)
+
+
+a.mainloop()
