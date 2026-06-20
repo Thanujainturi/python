@@ -1,0 +1,11 @@
+l=[115,896,11,1,222]
+max=l[0]
+second_max=l[0]
+for i in l:
+  if i>max:
+    second_max=max
+    max=i
+  elif i>second_max and i<max:
+    second_max=i
+
+print(second_max)
